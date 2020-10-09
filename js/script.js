@@ -39,23 +39,23 @@ shirtSelectElement.addEventListener('change', (event) => {
 // 3) Follow the steps below to highlight the selected shirt 
   // 3a) Log out the value of the `select` element with `event.target` technique — console.log(event.target.value);
   // 3b) Create a variable to store the shirt `img` elements, using a querySelectorAll, like so — ('.shirt-image') 
-  const imgs = document.querySelectorAll('.shirt-image');
+  const img = document.querySelectorAll('.shirt-image');
   
   // 3c) Create a `for` loop to iterate over the shirt `img` elements in the variable above
-  for(let i = 0; i < imgs.length; i++) {
+  for(let i = 0; i < img.length; i++) {
   // 3d) Inside the loop, create the following two variables:
     // One to store the alt attribute of the image at the loop's current iteration, like so: YourImgVariableName[i].alt
-    let alts = imgs[i].alt;
+    let alts = img[i].alt;
     // One for the `event.target.value`
     let selectedOption = event.target.value;
     // 3e) Log out the two variables, refresh the page, and select a new shirt to confirm their values
     // 3f) Still inside the loop, create an if/else statement 
     if (alts === selectedOption) {
     // 3g) If the two variables you just created are equal, use the `.classList.add()` method to add the 'chosen' className to the img element
-      alts.classList.add('chosen');
+      img.classList.add('chosen');
     // 3h) Else use the `.classList.remove()` method to remove the 'chosen' className from the from the img element
     } else {
-      alts.classList.remove('chosen');
+      img.classList.remove('chosen');
     }
   }
   console.log("The select element's change event listener is functional!");
