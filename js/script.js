@@ -52,10 +52,10 @@ shirtSelectElement.addEventListener('change', (event) => {
     // 3f) Still inside the loop, create an if/else statement 
     if (alts === selectedOption) {
     // 3g) If the two variables you just created are equal, use the `.classList.add()` method to add the 'chosen' className to the img element
-      img.classList.add('chosen');
+      img[i].classList.add('chosen');
     // 3h) Else use the `.classList.remove()` method to remove the 'chosen' className from the from the img element
     } else {
-      img.classList.remove('chosen');
+      img[i].classList.remove('chosen');
     }
   }
   console.log("The select element's change event listener is functional!");
